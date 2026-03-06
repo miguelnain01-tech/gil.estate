@@ -785,20 +785,7 @@
             revealObserver.observe(reveal);
         });
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Show success message (you can integrate with your email service)
-            alert('Thank you for your message! I\'ll get back to you within 24 hours.');
-            
-            // Reset form
-            this.reset();
-        });
+        // Form submission - Formspree handles this automatically
 
         // Add loading animation
         window.addEventListener('load', () => {
