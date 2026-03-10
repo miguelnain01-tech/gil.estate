@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card Mockups | Miguel Nain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #D4BC7E;
+            --cream: #F5F1E8;
+            --cream-dark: #E8E2D4;
+            --sage: #8B9A7D;
+            --forest: #2D3B2D;
+            --mist: #9A958C;
+            --charcoal: #1A1A1A;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            min-height: 100vh;
+            padding: 3rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: var(--forest);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--mist);
+            margin-bottom: 3rem;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .card-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--forest);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        /* Standard Business Card Size: 3.5" x 2" = 525px x 300px at 150dpi */
+        .business-card {
+            width: 525px;
+            height: 300px;
+            background: var(--white);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* DESIGN 1: Classic Elegant */
+        .card-classic {
+            display: flex;
+        }
+
+        .card-classic .left-panel {
+            width: 45%;
+            background: var(--forest);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .card-classic .left-panel::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gold);
+        }
+
+        .card-classic .logo-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-classic .tagline {
+            color: var(--cream);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .card-classic .right-panel {
+            width: 55%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-classic .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--forest);
+            margin-bottom: 0.25rem;
+        }
+
+        .card-classic .title {
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-classic .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--charcoal);
+        }
+
+        .card-classic .contact-row svg {
+            width: 14px;
+            height: 14px;
+            color: var(--sage);
+        }
+
+        .card-classic .brokerage {
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--cream-dark);
+            font-size: 0.75rem;
+            color: var(--mist);
+        }
+
+        /* DESIGN 2: Modern Minimal */
+        .card-modern {
+            background: var(--white);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-modern .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .card-modern .logo-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-modern .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--forest);
+            letter-spacing: 0.05em;
+        }
+
+        .card-modern .logo-accent {
+            width: 40px;
+            height: 3px;
+            background: var(--gold);
+            margin-top: 0.5rem;
+        }
+
+        .card-modern .equal-housing {
+            width: 35px;
+            height: 35px;
+            color: var(--mist);
+        }
+
+        .card-modern .middle-section {
+            text-align: center;
+        }
+
+        .card-modern .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--forest);
+            margin-bottom: 0.25rem;
+        }
+
+        .card-modern .title {
+            color: var(--sage);
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .card-modern .bottom-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 0.8rem;
+            color: var(--charcoal);
+        }
+
+        .card-modern .contact-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .card-modern .dre {
+            font-size: 0.7rem;
+            color: var(--mist);
+        }
+
+        /* DESIGN 3: Luxe Gold Accent */
+        .card-luxe {
+            background: var(--forest);
+            position: relative;
+        }
+
+        .card-luxe::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+        }
+
+        .card-luxe .content {
+            padding: 2.5rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-luxe .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .card-luxe .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+        }
+
+        .card-luxe .equal-housing {
+            width: 30px;
+            height: 30px;
+            color: var(--cream);
+        }
+
+        .card-luxe .main {
+            text-align: center;
+        }
+
+        .card-luxe .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.25rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-luxe .title {
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .card-luxe .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--cream);
+            padding-top: 1rem;
+            border-top: 1px solid rgba(201, 169, 98, 0.3);
+        }
+
+        .card-luxe .contact-info {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .card-luxe .dre {
+            font-size: 0.7rem;
+            color: var(--mist);
+        }
+
+        /* DESIGN 4: Vertical/Portrait */
+        .card-vertical {
+            width: 300px;
+            height: 525px;
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-vertical .top {
+            background: var(--forest);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .card-vertical .top::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .card-vertical .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-vertical .tagline {
+            color: var(--cream);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .card-vertical .bottom {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-vertical .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--forest);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-vertical .title {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .card-vertical .contact-item {
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: var(--charcoal);
+        }
+
+        .card-vertical .contact-item span {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--mist);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-vertical .brokerage {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--cream-dark);
+            font-size: 0.75rem;
+            color: var(--mist);
+        }
+
+        .card-vertical .dre {
+            font-size: 0.65rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Print Button */
+        .print-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .print-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--forest);
+            margin-bottom: 1rem;
+        }
+
+        .print-section p {
+            color: var(--mist);
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--forest);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .print-section,
+            h1,
+            .subtitle,
+            .card-title {
+                display: none;
+            }
+            .cards-grid {
+                display: block;
+            }
+            .card-wrapper {
+                page-break-after: always;
+                margin-bottom: 2rem;
+            }
+            .business-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .business-card {
+                transform: scale(0.7);
+                transform-origin: top center;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Business Card Mockups</h1>
+        <p class="subtitle">Miguel Nain | Luxury Real Estate | Coldwell Banker West</p>
+
+        <div class="cards-grid">
+            <!-- Design 1: Classic Elegant -->
+            <div class="card-wrapper">
+                <h3 class="card-title">Design 1: Classic Elegant</h3>
+                <div class="business-card card-classic">
+                    <div class="left-panel">
+                        <div class="logo-large">GIL</div>
+                        <div class="tagline">Luxury Real Estate</div>
+                    </div>
+                    <div class="right-panel">
+                        <div class="name">Miguel Nain</div>
+                        <div class="title">Luxury Real Estate Specialist</div>
+                        <div class="contact-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            619-486-0868
+                        </div>
+                        <div class="contact-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            miguel@gil.estate
+                        </div>
+                        <div class="contact-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            gil.estate
+                        </div>
+                        <div class="brokerage">Coldwell Banker West | DRE #02296203</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design 2: Modern Minimal -->
+            <div class="card-wrapper">
+                <h3 class="card-title">Design 2: Modern Minimal</h3>
+                <div class="business-card card-modern">
+                    <div class="top-section">
+                        <div class="logo-section">
+                            <div class="logo-text">GIL.ESTATE</div>
+                            <div class="logo-accent"></div>
+                        </div>
+                        <svg class="equal-housing" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+                            <path d="M50 5 L90 40 L85 40 L85 90 L15 90 L15 40 L10 40 Z"/>
+                            <rect x="30" y="55" width="40" height="6" fill="currentColor"/>
+                            <rect x="30" y="70" width="40" height="6" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="middle-section">
+                        <div class="name">Miguel Nain</div>
+                        <div class="title">Luxury Real Estate Specialist</div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="contact-col">
+                            <span>619-486-0868</span>
+                            <span>miguel@gil.estate</span>
+                        </div>
+                        <div class="dre">DRE #02296203<br>Coldwell Banker West</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design 3: Luxe Gold Accent -->
+            <div class="card-wrapper">
+                <h3 class="card-title">Design 3: Luxe Gold Accent</h3>
+                <div class="business-card card-luxe">
+                    <div class="content">
+                        <div class="header">
+                            <div class="logo">GIL.ESTATE</div>
+                            <svg class="equal-housing" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+                                <path d="M50 5 L90 40 L85 40 L85 90 L15 90 L15 40 L10 40 Z"/>
+                                <rect x="30" y="55" width="40" height="6" fill="currentColor"/>
+                                <rect x="30" y="70" width="40" height="6" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="main">
+                            <div class="name">Miguel Nain</div>
+                            <div class="title">Luxury Real Estate Specialist</div>
+                        </div>
+                        <div class="footer">
+                            <div class="contact-info">
+                                <span>619-486-0868</span>
+                                <span>miguel@gil.estate</span>
+                                <span>gil.estate</span>
+                            </div>
+                            <div class="dre">DRE #02296203</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design 4: Vertical Portrait -->
+            <div class="card-wrapper">
+                <h3 class="card-title">Design 4: Vertical Portrait</h3>
+                <div class="business-card card-vertical">
+                    <div class="top">
+                        <div class="logo">GIL</div>
+                        <div class="tagline">Luxury Real Estate</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="name">Miguel Nain</div>
+                        <div class="title">Luxury Real Estate Specialist</div>
+                        <div class="contact-item">
+                            <span>Phone</span>
+                            619-486-0868
+                        </div>
+                        <div class="contact-item">
+                            <span>Email</span>
+                            miguel@gil.estate
+                        </div>
+                        <div class="contact-item">
+                            <span>Website</span>
+                            gil.estate
+                        </div>
+                        <div class="brokerage">
+                            Coldwell Banker West
+                            <div class="dre">CA DRE #02296203</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="print-section">
+            <h2>Ready to Print?</h2>
+            <p>These mockups are sized at standard business card dimensions (3.5" x 2"). You can print this page or save as PDF. For professional printing, export the design you like and send to a printer like Moo, VistaPrint, or a local print shop.</p>
+            <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+        </div>
+    </div>
+</body>
+</html>
