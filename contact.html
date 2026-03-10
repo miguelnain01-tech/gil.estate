@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Miguel Nain | Luxury Real Estate</title>
+    <meta name="description" content="Get in touch with Miguel Nain, luxury real estate specialist with Coldwell Banker West. Schedule a consultation today.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">GIL.ESTATE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="communities.html">Communities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <p class="hero-subtitle">Let's Connect</p>
+            <h1>Get in Touch</h1>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Start Your Journey</h2>
+                    <p class="lead">Whether you're buying, selling, or simply exploring the market, I'm here to provide guidance tailored to your unique situation.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:619-486-0868">619-486-0868</a>
+                                <p>Available Monday - Saturday, 8am - 7pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:miguel@gil.estate">miguel@gil.estate</a>
+                                <p>Response within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <span class="contact-icon">🏢</span>
+                            <div>
+                                <h4>Office</h4>
+                                <p><strong>Coldwell Banker West</strong></p>
+                                <p>410 Kalmia Street</p>
+                                <p>San Diego, CA 92105</p>
+                                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--gold);">City Heights Location</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credentials-box">
+                        <h4>Credentials</h4>
+                        <ul>
+                            <li><strong>License:</strong> CA DRE #02296203</li>
+                            <li><strong>Brokerage:</strong> Coldwell Banker West</li>
+                            <li><strong>Specialization:</strong> Luxury Residential</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnqevjdr" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">I'm Interested In</label>
+                            <select id="interest" name="interest">
+                                <option value="">Select an option</option>
+                                <option value="buying">Buying a Home</option>
+                                <option value="selling">Selling a Home</option>
+                                <option value="both">Buying & Selling</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="community">Preferred Community</label>
+                            <select id="community" name="community">
+                                <option value="">Select a community (optional)</option>
+                                <option value="point-loma">Point Loma</option>
+                                <option value="la-jolla">La Jolla</option>
+                                <option value="rancho-santa-fe">Rancho Santa Fe</option>
+                                <option value="mission-hills">Mission Hills</option>
+                                <option value="fallbrook">Fallbrook</option>
+                                <option value="poway">Poway</option>
+                                <option value="alpine">Alpine</option>
+                                <option value="bonita">Bonita</option>
+                                <option value="other">Other / Not Sure</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your real estate goals..."></textarea>
+                        </div>
+                        
+                        <input type="hidden" name="_subject" value="New inquiry from GIL.ESTATE">
+                        <input type="hidden" name="_next" value="https://gil.estate/thank-you.html">
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                    <div id="formStatus" style="margin-top: 1rem; text-align: center; display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--forest) 0%, var(--sage) 100%); display: flex; align-items: center; justify-content: center; color: var(--white);">
+            <div style="text-align: center;">
+                <h3 style="color: var(--white); margin-bottom: 1rem;">Visit Our Office</h3>
+                <p style="font-size: 1.25rem; margin-bottom: 0.5rem;">Coldwell Banker West</p>
+                <p>410 Kalmia Street</p>
+                <p>San Diego, CA 92105</p>
+                <a href="https://maps.google.com/?q=410+Kalmia+Street+San+Diego+CA+92105" target="_blank" class="btn btn-outline-light" style="margin-top: 1.5rem;">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">GIL.ESTATE</a>
+                    <p>Luxury real estate services in San Diego's most prestigious communities. Guided by integrity, driven by results.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="communities.html">Communities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-communities">
+                    <h4>Communities</h4>
+                    <ul class="footer-links">
+                        <li><a href="communities.html">Point Loma</a></li>
+                        <li><a href="communities.html">La Jolla</a></li>
+                        <li><a href="communities.html">Rancho Santa Fe</a></li>
+                        <li><a href="communities.html">Mission Hills</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:619-486-0868">619-486-0868</a></li>
+                        <li><a href="mailto:miguel@gil.estate">miguel@gil.estate</a></li>
+                        <li>Coldwell Banker West</li>
+                        <li>410 Kalmia Street</li>
+                        <li>San Diego, CA 92105</li>
+                        <li>DRE #02296203</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Miguel Nain. All rights reserved.</p>
+                <p>Designed with care for GIL.ESTATE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

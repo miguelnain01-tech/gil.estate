@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communities | Miguel Nain | Luxury Real Estate</title>
+    <meta name="description" content="Explore San Diego's finest communities - Point Loma, La Jolla, Rancho Santa Fe, Mission Hills, and more luxury neighborhoods.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .communities-grid-full {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .community-detail {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            min-height: 100vh !important;
+            background-color: #F5F1E8;
+            padding: 4rem 2rem;
+            text-align: center !important;
+        }
+        .community-detail:nth-child(odd) {
+            background-color: #FFFFFF;
+        }
+        .community-detail-content {
+            max-width: 800px;
+            text-align: center !important;
+        }
+        .community-detail h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-align: center !important;
+        }
+        .community-tagline {
+            text-align: center !important;
+        }
+        .community-detail p {
+            text-align: center !important;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .community-landmarks {
+            margin: 2rem auto;
+            max-width: 500px;
+        }
+        .community-landmarks ul {
+            justify-content: center;
+        }
+        .community-features {
+            display: inline-block;
+            text-align: left !important;
+            margin: 1rem auto 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">GIL.ESTATE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="communities.html">Communities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <p class="hero-subtitle">San Diego's Finest</p>
+            <h1>Communities I Serve</h1>
+        </div>
+    </header>
+
+    <!-- Communities Grid -->
+    <section class="communities-page section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Discover Your Perfect Neighborhood</h2>
+                <p>From coastal enclaves to hillside estates, each community offers its own unique character and lifestyle</p>
+            </div>
+            
+            <div class="communities-grid-full">
+                <!-- Point Loma -->
+                <div class="community-detail" id="point-loma">
+                    <div class="community-detail-image">
+                        <img src="images/point-loma.jpg" alt="Point Loma luxury homes">
+                    </div>
+                    <div class="community-detail-content">
+                        <h3>Point Loma</h3>
+                        <p class="community-tagline">Coastal elegance with panoramic bay views</p>
+                        <p>Point Loma offers some of San Diego's most coveted waterfront properties. From the historic charm of the peninsula to the stunning cliffs of Sunset Cliffs, this community combines nautical heritage with modern luxury. Residents enjoy world-class yachting facilities, pristine beaches, and breathtaking views of the Pacific Ocean and San Diego Bay.</p>
+                        <div class="community-landmarks">
+                            <h4>Local Landmarks</h4>
+                            <ul>
+                                <li>Sunset Cliffs Natural Park</li>
+                                <li>Cabrillo National Monument</li>
+                                <li>Point Loma Yacht Club</li>
+                                <li>Shelter Island</li>
+                            </ul>
+                        </div>
+                        <ul class="community-features">
+                            <li>Waterfront estates and luxury condos</li>
+                            <li>Historic Craftsman and Spanish Colonial homes</li>
+                            <li>World-class yachting and boating</li>
+                            <li>Proximity to downtown San Diego</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Explore Point Loma</a>
+                    </div>
+                </div>
+
+                <!-- La Jolla -->
+                <div class="community-detail" id="la-jolla">
+                    <div class="community-detail-image">
+                        <img src="images/la-jolla.jpg" alt="La Jolla luxury homes">
+                    </div>
+                    <div class="community-detail-content">
+                        <h3>La Jolla</h3>
+                        <p class="community-tagline">Where sophistication meets the Pacific</p>
+                        <p>Known as the "Jewel" of San Diego, La Jolla represents the pinnacle of coastal luxury living. This prestigious community features dramatic oceanfront estates, world-renowned cultural institutions, and the legendary Torrey Pines Golf Course. From the Village's upscale boutiques to the secluded canyons of Muirlands, La Jolla offers an unparalleled lifestyle.</p>
+                        <div class="community-landmarks">
+                            <h4>Local Landmarks</h4>
+                            <ul>
+                                <li>La Jolla Cove & Children's Pool</li>
+                                <li>Torrey Pines Golf Course</li>
+                                <li>Museum of Contemporary Art</li>
+                                <li>Birch Aquarium</li>
+                            </ul>
+                        </div>
+                        <ul class="community-features">
+                            <li>Oceanfront estates and cliff-top properties</li>
+                            <li>Prestigious Muirlands and Country Club neighborhoods</li>
+                            <li>World-class dining and shopping</li>
+                            <li>Proximity to UC San Diego and Scripps Institution</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Explore La Jolla</a>
+                    </div>
+                </div>
+
+                <!-- Rancho Santa Fe -->
+                <div class="community-detail" id="rancho-santa-fe">
+                    <div class="community-detail-image">
+                        <img src="images/rancho-santa-fe.jpg" alt="Rancho Santa Fe luxury estates">
+                    </div>
+                    <div class="community-detail-content">
+                        <h3>Rancho Santa Fe</h3>
+                        <p class="community-tagline">Timeless estates in a private paradise</p>
+                        <p>The Covenant of Rancho Santa Fe is one of the most exclusive residential communities in the United States. This gated enclave features sprawling estates on multi-acre parcels, world-class equestrian facilities, and the legendary Rancho Santa Fe Golf Club. Privacy, security, and timeless elegance define this prestigious address.</p>
+                        <div class="community-landmarks">
+                            <h4>Local Landmarks</h4>
+                            <ul>
+                                <li>Rancho Santa Fe Golf Club</li>
+                                <li>The Inn at Rancho Santa Fe</li>
+                                <li>Osuna Ranch & Equestrian Center</li>
+                                <li>Del Mar Country Club</li>
+                            </ul>
+                        </div>
+                        <ul class="community-features">
+                            <li>Estate properties on 2+ acre minimum lots</li>
+                            <li>World-class equestrian facilities</li>
+                            <li>Private golf club and tennis facilities</li>
+                            <li>24/7 security and gated access</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Explore Rancho Santa Fe</a>
+                    </div>
+                </div>
+
+                <!-- Mission Hills -->
+                <div class="community-detail" id="mission-hills">
+                    <div class="community-detail-image">
+                        <img src="images/mission-hills.jpg" alt="Mission Hills historic homes">
+                    </div>
+                    <div class="community-detail-content">
+                        <h3>Mission Hills</h3>
+                        <p class="community-tagline">Historic charm with modern luxury</p>
+                        <p>Mission Hills is one of San Diego's most architecturally significant neighborhoods, featuring stunning examples of Craftsman, Spanish Revival, and Prairie School homes. This historic district offers tree-lined streets, walkable access to boutiques and cafes, and stunning views of the bay and downtown skyline.</p>
+                        <div class="community-landmarks">
+                            <h4>Local Landmarks</h4>
+                            <ul>
+                                <li>Heritage Park Victorian Village</li>
+                                <li>Pioneer Park</li>
+                                <li>Fort Stockton</li>
+                                <li>University Heights Shopping District</li>
+                            </ul>
+                        </div>
+                        <ul class="community-features">
+                            <li>Historic homes with architectural significance</li>
+                            <li>Walkable neighborhood with local boutiques</li>
+                            <li>Parks and canyon trails nearby</li>
+                            <li>Close proximity to downtown San Diego</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Explore Mission Hills</a>
+                    </div>
+                </div>
+
+                <!-- Fallbrook -->
+                <div class="community-detail" id="fallbrook">
+                    <div class="community-detail-image">
+                        <img src="images/fallbrook.jpg" alt="Fallbrook country estates">
+                    </div>
+                    <div class="community-detail-content">
+                        <h3>Fallbrook</h3>
+                        <p class="community-tagline">Country estates and avocado groves</p>
+                        <p>Known as the "Avocado Capital of the World," Fallbrook offers a rural retreat with sophisticated country living. This community features expansive ranch properties, equestrian estates, and a thriving arts scene. Residents enjoy a relaxed pace of life while remaining within reach of San Diego and Orange County.</p>
+                        <div class="community-landmarks">
+                            <h4>Local Landmarks</h4>
+                            <ul>
+                                <li>Grand Tradition Estate & Gardens</li>
+                                <li>Fallbrook Art Center</li>
+                                <li>Live Oak Park</li>
+                                <li>Avocado Festival (Annual)</li>
+                            </ul>
+                        </div>
+                        <ul class="community-features">
+                            <li>Ranch and equestrian properties</li>
+                            <li>Large acreage estates</li>
+                            <li>Thriving arts community</li>
+                            <li>Scenic rolling hills and groves</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Explore Fallbrook</a>
+                    </div>
+                </div>
+
+                <!-- Poway -->
+                <div class="community-detail" id="poway">
+                    <div class="community-detail-image">
+                        <img src="images/poway.jpg" alt="Poway family estates">
+                    </div>
+                    <div class="community-detail-content">
+                        <h3>Poway</h3>
+                        <p class="community-tagline">Family retreats in the countryside</p>
+                        <p>Poway offers the perfect blend of suburban comfort and rural charm. Known as "The City in the Country," this community features excellent schools, expansive parks, and a variety of housing options from modern subdivisions to equestrian estates. The famous Poway Rodeo and weekly farmers market embody the community's family-friendly spirit.</p>
+                        <div class="community-landmarks">
+                            <h4>Local Landmarks</h4>
+                            <ul>
+                                <li>Lake Poway & Blue Sky Ecological Reserve</li>
+                                <li>Poway Center for the Performing Arts</li>
+                                <li>Poway Park & Old Poway Park</li>
+                                <li>Poway-Midland Railroad</li>
+                            </ul>
+                        </div>
+                        <ul class="community-features">
+                            <li>Top-rated schools and family amenities</li>
+                            <li>Equestrian properties and trails</li>
+                            <li>Expansive parks and outdoor recreation</li>
+                            <li>Strong sense of community</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Explore Poway</a>
+                    </div>
+                </div>
+
+                <!-- Alpine -->
+                <div class="community-detail" id="alpine">
+                    <div class="community-detail-image">
+                        <img src="images/alpine.jpg" alt="Alpine mountain view homes">
+                    </div>
+                    <div class="community-detail-content">
+                        <h3>Alpine</h3>
+                        <p class="community-tagline">Mountain views and rural tranquility</p>
+                        <p>Alpine offers a true mountain retreat just 30 minutes from downtown San Diego. This community features properties with stunning mountain and valley views, large lots, and a peaceful rural atmosphere. The nearby Cleveland National Forest provides endless opportunities for hiking, horseback riding, and outdoor adventure.</p>
+                        <div class="community-landmarks">
+                            <h4>Local Landmarks</h4>
+                            <ul>
+                                <li>Cleveland National Forest</li>
+                                <li>Viejas Casino & Outlet Center</li>
+                                <li>Alpine Community Center</li>
+                                <li>Wright's Field Preserve</li>
+                            </ul>
+                        </div>
+                        <ul class="community-features">
+                            <li>Mountain view properties</li>
+                            <li>Large acreage and ranch homes</li>
+                            <li>Proximity to Cleveland National Forest</li>
+                            <li>Peaceful rural setting</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Explore Alpine</a>
+                    </div>
+                </div>
+
+                <!-- Bonita -->
+                <div class="community-detail" id="bonita">
+                    <div class="community-detail-image">
+                        <img src="images/bonita.jpg" alt="Bonita valley estates">
+                    </div>
+                    <div class="community-detail-content">
+                        <h3>Bonita</h3>
+                        <p class="community-tagline">Valley living with suburban charm</p>
+                        <p>Bonita offers a unique blend of suburban convenience and rural character in the Sweetwater Valley. This community features horse-friendly properties, golf course homes, and a relaxed lifestyle. The historic Bonita Golf Course and walking trails along the Sweetwater River add to the area's appeal.</p>
+                        <div class="community-landmarks">
+                            <h4>Local Landmarks</h4>
+                            <ul>
+                                <li>Rohr Park & Nature Center</li>
+                                <li>Bonita Golf Course</li>
+                                <li>Sweetwater Regional Park</li>
+                                <li>Bonita Museum & Cultural Center</li>
+                            </ul>
+                        </div>
+                        <ul class="community-features">
+                            <li>Horse-friendly properties</li>
+                            <li>Golf course homes</li>
+                            <li>Walking trails and outdoor recreation</li>
+                            <li>Convenient access to major freeways</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Explore Bonita</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section-padding">
+        <div class="container">
+            <h2>Find Your Community</h2>
+            <p>Not sure which neighborhood is right for you? Let's discuss your lifestyle goals and find the perfect match.</p>
+            <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">GIL.ESTATE</a>
+                    <p>Luxury real estate services in San Diego's most prestigious communities. Guided by integrity, driven by results.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="communities.html">Communities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-communities">
+                    <h4>Communities</h4>
+                    <ul class="footer-links">
+                        <li><a href="communities.html#point-loma">Point Loma</a></li>
+                        <li><a href="communities.html#la-jolla">La Jolla</a></li>
+                        <li><a href="communities.html#rancho-santa-fe">Rancho Santa Fe</a></li>
+                        <li><a href="communities.html#mission-hills">Mission Hills</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:619-486-0868">619-486-0868</a></li>
+                        <li><a href="mailto:miguel@gil.estate">miguel@gil.estate</a></li>
+                        <li>Coldwell Banker West</li>
+                        <li>DRE #02296203</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Miguel Nain. All rights reserved.</p>
+                <p>Designed with care for GIL.ESTATE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
