@@ -81,6 +81,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Cookie Consent Banner
+    const cookieBanner = document.createElement('div');
+    cookieBanner.className = 'cookie-banner';
+    cookieBanner.innerHTML = `
+        <p>We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use our site, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+        <button class="btn btn-primary" id="acceptCookies">Accept</button>
+    `;
+    document.body.appendChild(cookieBanner);
+    
+    // Check if user has already accepted cookies
+    if (!localStorage.getItem('cookiesAccepted')) {
+        // Show banner after a short delay
+        setTimeout(() => {
+            cookieBanner.classList.add('show');
+        }, 1000);
+    }
+    
+    // Handle accept button
+    document.getElementById('acceptCookies').addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.classList.remove('show');
+    });
+    
     // Add animation on scroll
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.community-card, .property-card, .community-detail');

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40">
+  <!-- House outline -->
+  <path d="M50 5 L90 40 L85 40 L85 90 L15 90 L15 40 L10 40 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+  <!-- Equal sign -->
+  <rect x="30" y="55" width="40" height="6" fill="currentColor"/>
+  <rect x="30" y="70" width="40" height="6" fill="currentColor"/>
+</svg>
