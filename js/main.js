@@ -44,15 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Contact form handling
+    // Contact form handling - Formspree integration
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
+            // Get form data for validation
             const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
             
             // Simple validation
             let isValid = true;
@@ -68,28 +65,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            if (isValid) {
-                // Show success message
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
-                
-                submitBtn.textContent = 'Message Sent!';
-                submitBtn.disabled = true;
-                submitBtn.style.backgroundColor = '#27ae60';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.backgroundColor = '';
-                }, 3000);
-                
-                // Log form data (for development)
-                console.log('Form submitted:', data);
+            if (!isValid) {
+                e.preventDefault();
+                return;
             }
+            
+            // Form is valid - let it submit to Formspree
+            // Show sending state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Form will submit naturally to Formspree
+            // User will be redirected to Formspree's thank you page
         });
     }
     
