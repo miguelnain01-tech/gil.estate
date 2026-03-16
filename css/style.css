@@ -256,6 +256,17 @@ a {
     color: var(--white);
 }
 
+.hero-logo {
+    margin-bottom: 1.5rem;
+}
+
+.cb-hero-logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
 .hero-subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
