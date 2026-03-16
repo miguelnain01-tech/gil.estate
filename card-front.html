@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Nain Business Card - FRONT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: 3.5in 2in;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 3.5in;
+            height: 2in;
+            background: white;
+        }
+
+        /* Business Card: 3.5in x 2in */
+        .business-card {
+            width: 3.5in;
+            height: 2in;
+            background: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .left-panel {
+            width: 38%;
+            background: #2D3B2D;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.15in;
+            position: relative;
+        }
+
+        .left-panel::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 0.025in;
+            background: #C9A962;
+        }
+
+        .logo-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.32in;
+            color: #C9A962;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.02in;
+        }
+
+        .tagline {
+            color: #F5F1E8;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.07in;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .right-panel {
+            width: 62%;
+            padding: 0.2in;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.26in;
+            color: #2D3B2D;
+            margin-bottom: 0.02in;
+            font-weight: 600;
+        }
+
+        .title {
+            color: #9A958C;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.09in;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.12in;
+        }
+
+        .contact-row {
+            font-size: 0.1in;
+            color: #1A1A1A;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.04in;
+            letter-spacing: 0.02em;
+        }
+
+        .brokerage {
+            margin-top: 0.1in;
+            padding-top: 0.06in;
+            border-top: 1px solid #F5F1E8;
+            font-size: 0.08in;
+            color: #9A958C;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="business-card">
+        <div class="left-panel">
+            <div class="logo-large">GIL</div>
+            <div class="tagline">Estate</div>
+        </div>
+        <div class="right-panel">
+            <div class="name">Miguel</div>
+            <div class="title">Coldwell Banker West</div>
+            <div class="contact-row">619.486.0868</div>
+            <div class="contact-row">miguel@gil.estate</div>
+            <div class="contact-row">www.gil.estate</div>
+            <div class="brokerage">CA DRE #02296203</div>
+        </div>
+    </div>
+</body>
+</html>

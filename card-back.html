@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Nain Business Card - BACK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: 3.5in 2in;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 3.5in;
+            height: 2in;
+            background: white;
+        }
+
+        /* Business Card: 3.5in x 2in */
+        .business-card {
+            width: 3.5in;
+            height: 2in;
+            background: #2D3B2D;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .business-card::before {
+            content: '';
+            position: absolute;
+            top: 0.15in;
+            left: 0.15in;
+            right: 0.15in;
+            bottom: 0.15in;
+            border: 1px solid #C9A962;
+            opacity: 0.25;
+        }
+
+        .logo-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.45in;
+            color: #C9A962;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.03in;
+            z-index: 1;
+        }
+
+        .tagline {
+            color: #F5F1E8;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.09in;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="business-card">
+        <div class="logo-large">GIL</div>
+        <div class="tagline">San Diego Real Estate</div>
+    </div>
+</body>
+</html>
